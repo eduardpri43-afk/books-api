@@ -1,0 +1,26 @@
+{
+    "name": "student/books-api",
+    "description": "Простий REST API, що видає дані про книги української літератури з JSON-файлу",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-mbstring": "*",
+        "slim/slim": "^4.12",
+        "slim/psr7": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000 -t public"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
